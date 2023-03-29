@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Warrior.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.aor.journey.model.game.elements;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.model.game.places.Room;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.HashMap;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Warrior extends Element{</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static Warrior instance;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public final static int MAX_LIVES = 5;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public final static int MAX_TRAPS = 10;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int lives;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int coins;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private int currTraps;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final HashMap&#60;Room.Type, Boolean&#62; trophies;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private boolean wet = false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private Warrior(int x, int y) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        super(x, y);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.lives = 5;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.coins = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.currTraps = 3;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        trophies = new HashMap&#60;&#62;() {{</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            put(Room.Type.FIRE, false);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            put(Room.Type.GRASS, false);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            put(Room.Type.METAL, false);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            put(Room.Type.WATER, false);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }};</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static Warrior getInstance() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_32'/>
+32
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_32'>1</a>
+<span>
+1. getInstance : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (instance == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            instance = new Warrior(0,0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_36'>1</a>
+<span>
+1. getInstance : replaced return value with null for com/aor/journey/model/game/elements/Warrior::getInstance &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return instance;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static void resetInstance() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        instance = null;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void decreaseLives() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_42'>1</a>
+<span>
+1. decreaseLives : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.lives--;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void increaseLives(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_45'>2</a>
+<span>
+1. increaseLives : changed conditional boundary &rarr; KILLED<br/>
+2. increaseLives : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (lives &#60; MAX_LIVES) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_46'>1</a>
+<span>
+1. increaseLives : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            this.lives++;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void increaseCoins(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_50'/>
+50
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_50'>1</a>
+<span>
+1. increaseCoins : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.coins++;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_52'/>
+52
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_52'>1</a>
+<span>
+1. useCoins : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public void useCoins(int amount) { this.coins -= amount; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void decreaseCurrTraps(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_54'/>
+54
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_54'>1</a>
+<span>
+1. decreaseCurrTraps : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.currTraps--;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void increaseCurrTraps() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_57'/>
+57
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_57'>1</a>
+<span>
+1. increaseCurrTraps : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.currTraps++;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public void setCurrTraps(int traps) { this.currTraps = traps; }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getCurrTraps() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_61'/>
+61
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_61'>1</a>
+<span>
+1. getCurrTraps : replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getCurrTraps &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return currTraps;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public void setCoins(int coins) {this.coins = coins;}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public void setLives(int lives) {this.lives = lives;}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getLives() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_66'>1</a>
+<span>
+1. getLives : replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getLives &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return lives;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int getCoins(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_69'>1</a>
+<span>
+1. getCoins : replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getCoins &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return coins;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void wet(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        wet = true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void dry() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        wet = false;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean isWet(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_78'/>
+78
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_78'>2</a>
+<span>
+1. isWet : replaced boolean return with false for com/aor/journey/model/game/elements/Warrior::isWet &rarr; KILLED<br/>
+2. isWet : replaced boolean return with true for com/aor/journey/model/game/elements/Warrior::isWet &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return wet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public HashMap&#60;Room.Type, Boolean&#62; getTrophies() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_81'/>
+81
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_81'>1</a>
+<span>
+1. getTrophies : replaced return value with null for com/aor/journey/model/game/elements/Warrior::getTrophies &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return trophies;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3b57dba4_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getInstance<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseLivesTest()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getInstance<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseLivesTest()]</span></span> replaced return value with null for com/aor/journey/model/game/elements/Warrior::getInstance &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>decreaseLives<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseLivesTest()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>increaseLives<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseLivesTest()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>increaseLives<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseLivesTest()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>increaseLives<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseLivesTest()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>increaseCoins<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCoinsTest()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_52'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>useCoins<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:useCoinsTest()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_54'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>decreaseCurrTraps<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseCurrTraps()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_57'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>increaseCurrTraps<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCurrTraps()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_61'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCurrTraps<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCurrTraps()]</span></span> replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getCurrTraps &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getLives<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseLivesTest()]</span></span> replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getLives &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCoins<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCoinsTest()]</span></span> replaced int return with 0 for com/aor/journey/model/game/elements/Warrior::getCoins &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_78'>78</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_78'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isWet<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:wetDryTest()]</span></span> replaced boolean return with false for com/aor/journey/model/game/elements/Warrior::isWet &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isWet<br/><b>Killed by : </b>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:wetDryTest()]</span></span> replaced boolean return with true for com/aor/journey/model/game/elements/Warrior::isWet &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3b57dba4_81'>81</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3b57dba4_81'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getTrophies<br/><b>Killed by : </b>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:teleportTest()]</span></span> replaced return value with null for com/aor/journey/model/game/elements/Warrior::getTrophies &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.aor.journey.viewer.menu.ShopMenuViewerTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.menu.ShopMenuViewerTest]/[method:drawElementsTest()] (5 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.viewer.game.elements.ElementsViewerTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.elements.ElementsViewerTest]/[method:drawElementWarriorTest()] (3 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:useCoinsTest()] (4 ms)</li><li>com.aor.journey.behaviour.move.MoveTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.move.MoveTest]/[method:fastFollowMoveTest()] (5 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectHelpTest()] (4 ms)</li><li>com.aor.journey.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.MonsterControllerTest]/[method:moveMonstersGap()] (5 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseLivesTest()] (3 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:waterCollisionWetTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorRightNotEmptyTest()] (4 ms)</li><li>com.aor.journey.model.game.places.DungeonTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.places.DungeonTest]/[method:addRoomTest()] (8 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorLeftNotEmptyTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorRightEmptyTest()] (4 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:roomControllerTest()] (4 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:smashCollisionTest()] (5 ms)</li><li>com.aor.journey.model.game.places.RoomBuilderTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.places.RoomBuilderTest]/[method:roomBuilderTest()] (4 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:selectExitTest()] (4 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:stepTest()] (5 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectStartTest()] (4 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:selectBackTest()] (6 ms)</li><li>com.aor.journey.model.game.elements.MonsterTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.MonsterTest]/[method:metalMonsterTest()] (4 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorDownNotEmptyTest()] (4 ms)</li><li>com.aor.journey.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.MonsterControllerTest]/[method:moveMonsters()] (4 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCoinsTest()] (3 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:waterCollisionNotWetTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:zeroTrapsTest()] (4 ms)</li><li>com.aor.journey.viewer.game.places.DecoratorTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.places.DecoratorTest]/[method:homeDecoratorTest()] (6 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:waterCollisionAgainstWaterTest()] (6 ms)</li><li>com.aor.journey.viewer.game.places.DecoratorTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.places.DecoratorTest]/[method:shopDecoratorTest()] (5 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:simpleCollisionTrapTest()] (6 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectQuitTest()] (5 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:teleportTest()] (9 ms)</li><li>com.aor.journey.controller.menu.HelperMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.HelperMenuControllerTest]/[method:stepTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorLeftEmptyTest()] (4 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorDownEmptyTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:collisionWithMonsterTest()] (4 ms)</li><li>com.aor.journey.model.game.places.DungeonTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.places.DungeonTest]/[method:moveToNextRoomTest()] (5 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorUpEmptyTest()] (5 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseLivesTest()] (4 ms)</li><li>com.aor.journey.controller.menu.HelperMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.HelperMenuControllerTest]/[method:selectTest()] (3 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.viewer.game.places.DecoratorTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.places.DecoratorTest]/[method:lobbyDecoratorTest()] (6 ms)</li><li>com.aor.journey.model.PositionTest.[engine:junit-jupiter]/[class:com.aor.journey.model.PositionTest]/[method:nearTest()] (9 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:collectCoinTest()] (5 ms)</li><li>com.aor.journey.viewer.game.places.DecoratorTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.places.DecoratorTest]/[method:roomDecoratorTest()] (9 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:moveWarriorUpNotEmptyTest()] (6 ms)</li><li>com.aor.journey.behaviour.move.MoveTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.move.MoveTest]/[method:followMove()] (23 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()] (5 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:increaseCurrTraps()] (4 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:simpleCollisionTest()] (9 ms)</li><li>com.aor.journey.model.game.places.DungeonTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.places.DungeonTest]/[method:dungeonTest()] (10 ms)</li><li>com.aor.journey.controller.game.WarriorControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.WarriorControllerTest]/[method:collisionWithWaterTest()] (5 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:buyTest()] (5 ms)</li><li>com.aor.journey.viewer.game.places.ConcretePlaceViewerTest.[engine:junit-jupiter]/[class:com.aor.journey.viewer.game.places.ConcretePlaceViewerTest]/[method:concretePlaceViewerTest()] (5 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:selectCloseTest()] (5 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:decreaseCurrTraps()] (8 ms)</li><li>com.aor.journey.model.game.elements.WarriorTest.[engine:junit-jupiter]/[class:com.aor.journey.model.game.elements.WarriorTest]/[method:wetDryTest()] (3 ms)</li><li>com.aor.journey.controller.game.MonsterControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.MonsterControllerTest]/[method:moveMonstersClosed()] (4 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.6.3
+
+</body>
+</html>

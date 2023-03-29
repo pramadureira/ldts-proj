@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>LobbyState.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.aor.journey.state;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.controller.Controller;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.controller.game.LobbyController;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.model.game.places.Lobby;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.viewer.Viewer;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.aor.journey.viewer.game.places.LobbyDecorator;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class LobbyState extends PlaceState&#60;Lobby&#62; {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public LobbyState(Lobby lobby) { super(lobby); }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected Viewer&#60;Lobby&#62; getViewer(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_12'/>
+12
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_12'>1</a>
+<span>
+1. getViewer : replaced return value with null for com/aor/journey/state/LobbyState::getViewer &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return new LobbyDecorator(getModel());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected Controller&#60;Lobby&#62; getController(){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_15'/>
+15
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_15'>1</a>
+<span>
+1. getController : replaced return value with null for com/aor/journey/state/LobbyState::getController &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return new LobbyController(getModel());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@40f1aa95_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@40f1aa95_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_12'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getViewer<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/aor/journey/state/LobbyState::getViewer &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@40f1aa95_15'>15</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@40f1aa95_15'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getController<br/><b>Killed by : </b>none</span></span> replaced return value with null for com/aor/journey/state/LobbyState::getController &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectQuitTest()] (5 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:teleportTest()] (9 ms)</li><li>com.aor.journey.controller.menu.HelperMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.HelperMenuControllerTest]/[method:stepTest()] (5 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:selectExitTest()] (4 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:simpleCollisionTest()] (9 ms)</li><li>com.aor.journey.controller.menu.HelperMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.HelperMenuControllerTest]/[method:selectTest()] (3 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectStartTest()] (4 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:selectBackTest()] (6 ms)</li><li>com.aor.journey.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.MainMenuControllerTest]/[method:selectHelpTest()] (4 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:buyTest()] (5 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:selectCloseTest()] (5 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()] (5 ms)</li><li>com.aor.journey.controller.menu.GameOverMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.GameOverMenuControllerTest]/[method:stepTest()] (4 ms)</li><li>com.aor.journey.controller.game.PlaceControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.game.PlaceControllerTest]/[method:roomControllerTest()] (4 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.6.3
+
+</body>
+</html>

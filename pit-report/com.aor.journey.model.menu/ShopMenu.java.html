@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ShopMenu.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.aor.journey.model.menu;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Arrays;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class ShopMenu extends Menu {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public ShopMenu() { super(Arrays.asList(&#34;Buy Lives (5 coins)&#34;, &#34;Buy Traps (10 coins)&#34;, &#34;Close&#34;)); }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_7'/>
+7
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_7'>2</a>
+<span>
+1. isSelectedLives : replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedLives &rarr; KILLED<br/>
+2. isSelectedLives : replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedLives &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public boolean isSelectedLives() {return isSelected(0);}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_8'/>
+8
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_8'>2</a>
+<span>
+1. isSelectedTraps : replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedTraps &rarr; KILLED<br/>
+2. isSelectedTraps : replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedTraps &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public boolean isSelectedTraps() {return isSelected(1);}</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_9'/>
+9
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_9'>2</a>
+<span>
+1. isSelectedClose : replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedClose &rarr; KILLED<br/>
+2. isSelectedClose : replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedClose &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    public boolean isSelectedClose() {return isSelected(2);}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3e151e1f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3e151e1f_7'>7</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_7'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isSelectedLives<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()]</span></span> replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedLives &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isSelectedLives<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:selectCloseTest()]</span></span> replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedLives &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3e151e1f_8'>8</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_8'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isSelectedTraps<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:buyTest()]</span></span> replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedTraps &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isSelectedTraps<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()]</span></span> replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedTraps &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3e151e1f_9'>9</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3e151e1f_9'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isSelectedClose<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:selectCloseTest()]</span></span> replaced boolean return with false for com/aor/journey/model/menu/ShopMenu::isSelectedClose &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isSelectedClose<br/><b>Killed by : </b>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()]</span></span> replaced boolean return with true for com/aor/journey/model/menu/ShopMenu::isSelectedClose &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:buyTest()] (5 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:selectCloseTest()] (5 ms)</li><li>com.aor.journey.behaviour.collision.CollisionTest.[engine:junit-jupiter]/[class:com.aor.journey.behaviour.collision.CollisionTest]/[method:simpleCollisionTest()] (9 ms)</li><li>com.aor.journey.controller.menu.ShopMenuControllerTest.[engine:junit-jupiter]/[class:com.aor.journey.controller.menu.ShopMenuControllerTest]/[method:stepTest()] (5 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.6.3
+
+</body>
+</html>
